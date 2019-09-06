@@ -28,6 +28,7 @@ def main():
                     tmp = 1
                     while tmp == 1:
                         if w_width <= image.shape[1] and w_height <= image.shape[0]:
+                            # you can change strides by modifying w_width and w_height in the step size section
                             for x in range(0, image.shape[1]-w_width, w_width):
                                 for y in range(0, image.shape[0]-w_height, w_height):
                                     new_cut = cv2.rectangle(image, (x,y), (x+w_width, y+w_height), (255,0,0),1)
